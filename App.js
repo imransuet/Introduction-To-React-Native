@@ -4,14 +4,15 @@ import { StyleSheet, Text, View,Image, SafeAreaView } from 'react-native';
 
 export default function App() {
 
-  const handlePress=()=> console.log("Text pressed");
 
-  
   
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>Open up App.</Text>
-      <Image source={require('./assets/icon.png')}/>
+      <Text >Open up App.</Text>
+      <Image source={{
+        width:200,
+        height:300,
+        uri:"https://picsum.photos/200/300"}}/>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
