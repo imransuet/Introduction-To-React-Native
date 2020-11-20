@@ -9,15 +9,28 @@ const {landscape}= useDeviceOrientation();
   
   return (
    <View style ={{
-     backgroundColor:"red",
+     backgroundColor:"#ffe",
 
      flex:1,
-     flexDirection:"row-reverse"
+     flexDirection:"row",
+     justifyContent:"center",
+     alignItems:"center",
+     flexWrap:"nowrap"
+
    }}>
      <View  style ={{
      backgroundColor:"blue",
 
-    width:200,
+    width:100,
+    height:100,
+   }}>
+     
+    
+     </View>
+     <View  style ={{
+     backgroundColor:"magenta",
+
+    width:100,
     height:100,
    }}>
      
@@ -27,7 +40,18 @@ const {landscape}= useDeviceOrientation();
      backgroundColor:"tomato",
 
      width:100,
-    height:300,
+    height:100,
+    top:100,
+    left:200,
+    position:"absolute"
+   }}>
+    
+     </View>
+     <View  style ={{
+     backgroundColor:"grey",
+
+     width:100,
+    height:100,
    }}>
     
      </View>
