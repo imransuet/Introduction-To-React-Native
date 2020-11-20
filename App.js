@@ -12,19 +12,23 @@ const {landscape}= useDeviceOrientation();
      backgroundColor:"red",
 
      flex:1,
+     flexDirection:"row-reverse"
    }}>
      <View  style ={{
      backgroundColor:"blue",
 
-     flex:.5,
+    width:200,
+    height:100,
    }}>
+     
+    
+     </View>
      <View  style ={{
      backgroundColor:"tomato",
 
-     flex:.5,
+     width:100,
+    height:300,
    }}>
-    
-     </View>
     
      </View>
     
