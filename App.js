@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View,Image, SafeAreaView } from 'react-native';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
+import AppText from './app/components/Apptext'
 
 export default function App() {
   return(
@@ -15,18 +16,9 @@ export default function App() {
       alignItems:"center"
     }}>
   
-     <Text
-     style={{
-       fontSize:30,
-       fontFamily:'Roboto',
-       fontWeight:'bold',
-       color:'tomato',
-       textAlign:'center',
-       lineHeight:50
-
-       // these properties are only valid for text components
-     }}
-     >I hate this. i dont know why i am doing this</Text>
+     <AppText
+    
+     >I hate this. i dont know why i am doing this</AppText>
   
     </View>
 
