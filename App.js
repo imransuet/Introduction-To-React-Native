@@ -4,10 +4,10 @@ import { StyleSheet, Text, View,Image, SafeAreaView } from 'react-native';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
-
 export default function App() {
   return(
-
+    //margin: how much distance the element wants to keep with other elements around it?
+    //padding: how much distance an element wants to keep with the elements inside it?
     <View
     style={{
       flex:1,
@@ -18,16 +18,34 @@ export default function App() {
       <View
       style={{
   
-        backgroundColor:"dodgerblue",width:100, height:100,
-        borderWidth:10,
-        borderColor:"royalblue",
-        borderRadius:20,
-        borderTopWidth:20,
-        borderTopLeftRadius:50
+        backgroundColor:"dodgerblue",
+        width:100, 
+        height:100,
+        padding:10
+  
 
 
       }}
-      ></View>
+      >
+<View style={{
+  backgroundColor:"gold",
+  height:50,
+  width:50
+}}>
+
+</View>
+
+      </View>
+
+      <View
+      style={{backgroundColor:"tomato",
+      width:100,
+      height:100,
+      margin :20
+    }}
+      >
+
+      </View>
   
     </View>
 
