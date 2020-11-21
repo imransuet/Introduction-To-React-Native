@@ -15,37 +15,18 @@ export default function App() {
       alignItems:"center"
     }}>
   
-      <View
-      style={{
-  
-        backgroundColor:"dodgerblue",
-        width:100, 
-        height:100,
-        padding:10
-  
+     <Text
+     style={{
+       fontSize:30,
+       fontFamily:'Roboto',
+       fontWeight:'bold',
+       color:'tomato',
+       textAlign:'center',
+       lineHeight:50
 
-
-      }}
-      >
-<View style={{
-  backgroundColor:"gold",
-  height:50,
-  width:50
-}}>
-
-</View>
-
-      </View>
-
-      <View
-      style={{backgroundColor:"tomato",
-      width:100,
-      height:100,
-      margin :20
-    }}
-      >
-
-      </View>
+       // these properties are only valid for text components
+     }}
+     >I hate this. i dont know why i am doing this</Text>
   
     </View>
 
