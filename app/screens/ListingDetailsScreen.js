@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, View ,StyleSheet, Text} from 'react-native';
-import AppText from '../components/AppText/Apptext.js';
+import AppText from '../components/AppText';
 import ListItem from '../components/ListItem'
 function ListingDetailsScreen(props) {
     return (
