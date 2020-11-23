@@ -26,7 +26,9 @@ function ListItem({title, subTitle, image, ImageComponent, onPress, renderRightA
 const styles = StyleSheet.create({
     container:{
           
-        flexDirection:'row'
+        flexDirection:'row',
+        paddingRight:15,
+        backgroundColor:colors.white
 
     },
     detailsContainer:{
