@@ -7,11 +7,23 @@ import AppPicker from './app/components/AppPicker';
 
 export default function App() {
 const[isNew, setIsNew]=useState(false);
+
+const categories=[
+  {
+    label:"Furniture", value:1
+  },
+  {
+    label:"Clothing", value:2
+  },
+  {
+    label:"Camera", value:3
+  },
+];
   return(
 
    <Screen>
  
-<AppPicker icon="icon" placeholder="Category"/>
+<AppPicker items={categories} icon="icon" placeholder="Category"/>
 <AppTextInput icon="email"  placeholder="email"/>
    </Screen>
 
