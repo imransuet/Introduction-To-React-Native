@@ -1,11 +1,18 @@
-import React from 'react';
-import { TextInput, View, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { TextInput, View, StyleSheet, TouchableNativeFeedback, Button, Modal } from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import defaultStyles from '../config/styles'
 import AppText from './AppText';
+import Screen from './Screen'
 
 function AppPicker({icon, placeholder, ...otherProps}) {
+
+    const [modalVisible, setModalVisible]=useState(false);
+
     return (
+        <React.Fragment>
+            // instead of writing <React.Fragment></React.Fragment> we can also write <></>
+        <TouchableNativeFeedback onPress={()=>setModalVisible(true)}>
         <View style={styles.container}>
           {icon &&  <MaterialCommunityIcons name={icon  } 
           size={20}
@@ -19,6 +26,21 @@ function AppPicker({icon, placeholder, ...otherProps}) {
          
            />
         </View>
+        </TouchableNativeFeedback>
+        <Modal 
+        visible={modalVisible}
+        animationType="slide"
+        >
+           <Screen>
+           <Button
+            title="close"
+            onPress={()=>setModalVisible(false)}
+            />
+           </Screen>
+           
+        </Modal>
+        </React.Fragment>
+       
     );
 }
 
