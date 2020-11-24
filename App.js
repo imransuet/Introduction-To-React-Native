@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import Screen from './app/components/Screen'
 import AppTextInput from './app/components/AppTextInput';
 import { Switch } from 'react-native';
+import AppPicker from './app/components/AppPicker';
 
 export default function App() {
 const[isNew, setIsNew]=useState(false);
@@ -10,10 +11,8 @@ const[isNew, setIsNew]=useState(false);
 
    <Screen>
  
-<Switch
-value={isNew} onValueChange={newValue=>setIsNew(newValue)}
-/>
-
+<AppPicker icon="icon" placeholder="Category"/>
+<AppTextInput icon="email"  placeholder="email"/>
    </Screen>
 
   );
