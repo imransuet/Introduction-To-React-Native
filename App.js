@@ -6,7 +6,8 @@ import { Switch } from 'react-native';
 import AppPicker from './app/components/AppPicker';
 
 export default function App() {
-const[isNew, setIsNew]=useState(false);
+
+const[category, setCategory]=useState(categories[0]);
 
 const categories=[
   {
@@ -23,7 +24,10 @@ const categories=[
 
    <Screen>
  
-<AppPicker items={categories} icon="apps" placeholder="Category"/>
+<AppPicker 
+selectedItem={category}
+onSelectItem={item=>setCategory(item)}
+items={categories} icon="apps" placeholder="Category"/>
 <AppTextInput icon="email"  placeholder="email"/>
    </Screen>
 
