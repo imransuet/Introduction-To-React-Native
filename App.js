@@ -23,7 +23,7 @@ const categories=[
 
    <Screen>
  
-<AppPicker items={categories} icon="icon" placeholder="Category"/>
+<AppPicker items={categories} icon="apps" placeholder="Category"/>
 <AppTextInput icon="email"  placeholder="email"/>
    </Screen>
 
