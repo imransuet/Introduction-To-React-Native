@@ -6,7 +6,13 @@ import AppText from './AppText';
 import Screen from './Screen'
 import PickerItem from './PickerItem';
 
-function AppPicker({icon, placeholder, items}) {
+function AppPicker({icon,
+    items,
+    onSelection,
+    PickerItemComponent=PickerItem,   
+     placeholder,
+      selectedItem, 
+      width="100%"}) {
 
     const [modalVisible, setModalVisible]=useState(false);
 
@@ -14,13 +20,13 @@ function AppPicker({icon, placeholder, items}) {
         <React.Fragment>
             {/* instead of writing <React.Fragment></React.Fragment> we can also write <></> */}
         <TouchableNativeFeedback onPress={()=>setModalVisible(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, {width}]}>
           {icon &&  <MaterialCommunityIcons name={icon  } 
           size={20}
           color={defaultStyles.colors.medium}
           style={styles.icon}
            />}
-           <AppText style={styles.text}>{placeholder}</AppText>
+           <AppText style={styles.text}>{selectedItem ? selectedItem.label:placeholder}</AppText>
            <MaterialCommunityIcons name="chevron-down"
           size={20}
           color={defaultStyles.colors.medium}
@@ -40,9 +46,14 @@ function AppPicker({icon, placeholder, items}) {
             <FlatList
               data={items}
               keyExtractor={item=>item.value.toString()}
-              renderItem={({item})=><PickerItem
+              numColumns={3}
+              renderItem={({item})=>
+              <PickerItemComponent
               label={item.label}
-              onPress={()=>console.log(item)}
+              onPress={()=>{
+                 setModalVisible(false); 
+                 onSelectItem(item);
+              }}
               />}
             />
            </Screen>
@@ -59,7 +70,6 @@ const styles = StyleSheet.create({
         backgroundColor:defaultStyles.colors.light,
         borderRadius:25,
         flexDirection:"row",
-        width:'100%',
         padding :15,
         marginVertical:10
     },
