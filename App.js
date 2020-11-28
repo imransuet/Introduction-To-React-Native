@@ -4,6 +4,8 @@ import * as Permissions from 'expo-permissions';
 
 import Screen from './app/components/Screen'
 import { Button, Image } from 'react-native';
+import ImageInput from './app/components/ImageInput';
+
 
 
 
@@ -37,6 +39,7 @@ const selectImage=async()=>
  <Screen>
    <Button title="Select Image" onPress={selectImage}/>
    <Image source={{uri:imageUri}} style={{width:200, height: 200}}/>
+   <ImageInput imageUri={imageUri}/>
  </Screen>
 
   );
