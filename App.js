@@ -22,6 +22,7 @@ export default function App() {
 
     requestPermission();
   },[]);
+  
 const selectImage=async()=>
 {
   try {
@@ -37,9 +38,10 @@ const selectImage=async()=>
   return(
 
  <Screen>
-   <Button title="Select Image" onPress={selectImage}/>
-   <Image source={{uri:imageUri}} style={{width:200, height: 200}}/>
-   <ImageInput imageUri={imageUri}/>
+   
+   <ImageInput imageUri={imageUri}
+   onChangeImage={(uri)=>setImageUri(uri)}
+   />
  </Screen>
 
   );
